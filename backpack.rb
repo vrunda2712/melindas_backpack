@@ -12,15 +12,14 @@ class Backpack
   def prepare
     weather = @attributes[:weather]
     day_of_week = @attributes[:day_of_week]
+    pant_shirt_for_daily
 
     if weather == 'rainy'
-      pant_shirt_for_daily
       @items << 'umbrella'
     elsif weather == 'cold'
-      pant_shirt_for_daily
       @items << 'jacket'
     else
-      pant_shirt_for_daily
+      @items
     end
 
     if day_of_week == 'monday' || day_of_week == 'thursday'
